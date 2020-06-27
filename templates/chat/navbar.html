@@ -1,0 +1,17 @@
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        
+        {% if user.is_authenticated %}
+        <li><strong class="brand-logo">{{ request.user.username }}</strong></li>
+        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}">Sign In</a></li>
+        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+        

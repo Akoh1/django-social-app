@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Page Content goes here -->
+    <div class="row">
+        <h1>This is a private chat app</h1>
+        <!-- <a class="waves-effect waves-light btn-large">Button</a> -->
+        <div class="col s6">
+            <a href="{% url 'account_signup' %}" class="waves-effect waves-light btn-large">Signup</a>
+        </div>
+      <div class="col s6">
+        <a href="{% url 'account_login' %}" class="waves-effect waves-light btn-large">Login</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
